@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{include/layout}">
+    <th:block layout:fragment="content">
+        <link rel="stylesheet" th:href="@{/css/home.css}"/>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- memNo 값을 저장할 hidden input 추가 -->
+        <input type="hidden" id="memNo" th:value="${memNo}" />
+
+   <div class="home-content">
+
+    <!-- 첫 번째 행: 원형 차트 2개 -->
+    <div class="chart-row-one">
+        <!-- 부서별 상위 5개 판매량 및 매출액 차트 -->
+<div class="chart-container-with-legend">
+    <canvas id="topDistributorSalesChart"></canvas>
+    <div id="topDistributorSalesChartLegend" class="chart-legend-container"></div>
+</div>
+
+<div class="chart-container-with-legend">
+    <canvas id="topVehiclesSalesChart"></canvas>
+    <div id="topVehiclesSalesChartLegend" class="chart-legend-container"></div>
+</div>
+</div>
+    <!-- 두 번째 행: 바 차트 2개 -->
+    <div class="chart-row-two">
+    <!-- 개인 연도별 판매량 차트: 큰 크기 (비율 2) -->
+    <div class="chart-container-large">
+        <div id="individualSalesChartContainer" class="chart-container">
+            <div class="chart-navigation">
+                <span id="currentYearLabel" class="year-label"></span>
+            </div>
+            <canvas id="individualSalesChart" class="chart-canvas" ></canvas>
+        </div>
+    </div>
+
+    <!-- 개인 월별 비교 차트: 작은 크기 (비율 1) -->
+    <div class="chart-container-small">
+        <div id="monthlyComparisonChartContainer" class="chart-container">
+            
+            <canvas id="monthlyComparisonChart" class="chart-canvas"></canvas>
+        </div>
+        <div id="distributorSalesChartContainer" class="chart-container" >
+            <canvas id="distributorSalesChart" class="chart-canvas"></canvas>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+        <script th:src="@{/js/home.js}"></script>
+    </th:block>
+</html>

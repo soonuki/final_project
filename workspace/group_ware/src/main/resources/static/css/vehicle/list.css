@@ -1,0 +1,106 @@
+
+
+#vehicle-container {
+    margin-left: 270px; 
+    margin-right: 100px; 
+    padding : 20px;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* 검색 폼 */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.search-elements {
+    display: flex;
+    gap: 10px;
+}
+select, input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 16px; 
+}
+
+button[type="submit"], .delete-section button {
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px; 
+}
+
+button[type="submit"]:hover {
+    background-color: #f1f1f1;
+}
+
+.delete-section {
+    margin-left: auto;
+}
+
+.delete-section button {
+    background-color: #d9534f;
+    color:white;
+}
+
+.delete-section button:hover {
+    background-color: #c9302c;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: rgba(209,201,240,0.6);
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+
+
+tr.selected {
+    background-color: rgba(255, 99, 71, 0.3); /* 선택된 행의 배경색 강조 */
+}
+
+tr:hover {
+    background-color: rgba(209,201,240,0.1);
+    transition: background-color 0.3s;
+    cursor: pointer; /* 클릭 가능하게 포인터 커서 추가 */
+}
+
+u{
+	color:#808080;
+	font-weight: bold;
+}
